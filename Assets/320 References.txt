@@ -1,0 +1,49 @@
+REMAINING TASKS
+---------------
+-> Get LVL1 from Ertug, merge it with this.
+-> Push the project to Git.
+
+[UMUT]
+-> Line Renderer For drawing a ray from the main player's gun towards infitinity
+-> Implementing a script so called Health.cs, attach both enemy and main player
+	-> Inside Health.cs;
+		GetDamage(float bulletDamage)
+		{
+			this.health -= bulletDamage;
+		}
+	-> Die()
+		{
+			if(this.health <= 0)
+				{
+					// trigger an animation
+					// splash coins and experience if enemy
+					// display score and return to menu if player
+				}
+		}
+-> Implement "Bullet"
+	-> GetDamage function to decrease staticaly once it is collided with a bullet 
+	-> Send bullet's damage as a parameter do the GetDamage function, then decrease the health point inside. (more flexibility.)
+
+-> Level Manager; to traverse among the levels.
+
+[OZAN]
+-> MainMenu
+-> InGame UI; PlayerHealth && Score && Experience
+-> DisplayScore UI; Upon death or finishing the game
+
+[ERTUG]
+-> 2 more levels
+-> After finishing the levels, could go along with UI.
+
+References to SE320 Project:
+-> Unity Documents
+
+Youtube Tutorials;
+-> "Third Person Shooter E2: GameManager & Input Controller"	by Stevie ROF
+-> "Third Person Shooter E3: Player & Gamemanager event"		by Stevie ROF
+-> "Third Person Shooter E5: Shooter"							by Stevie ROF
+-> "HowTo: Build a 3rd person shooter in Unity - Part 1"		by Jason Weimann
+
+
+
+
