@@ -1,11 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     [SerializeField]
     float health;
+    [SerializeField]
+    float maxHealth;
+
+    [SerializeField]
+    GameObject healthBarUI;
+    [SerializeField]
+    Slider healthSlider;
+
+    private void Start()
+    {
+        healthBarUI.SetActive(true);
+        health = maxHealth;
+        healthSlider.value = CalculateHealth();
+    }
+    private void Update()
+    {
+        healthSlider.value = CalculateHealth();
+
+    }
+
 
     public void takeDamage(float damage)
     {
@@ -29,5 +50,10 @@ public class Health : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+    }
+
+    public float CalculateHealth()
+    {
+        return health / maxHealth;
     }
 }

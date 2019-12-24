@@ -20,7 +20,7 @@ public class AlienShoot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         counter++;
 
@@ -30,7 +30,7 @@ public class AlienShoot : MonoBehaviour
             Shooting();
         }
 
-    }
+    }*/
 
     void Shooting()
     {

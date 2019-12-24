@@ -1,34 +1,27 @@
 REMAINING TASKS
 ---------------
--> Get LVL1 from Ertug, merge it with this.
--> Push the project to Git.
+
+Issues;
+-> Initial level design is problematic in terms of game speed. It doesn't provide a good gaming experience in terms of performance
+
 
 [UMUT]
--> Line Renderer For drawing a ray from the main player's gun towards infitinity
--> Implementing a script so called Health.cs, attach both enemy and main player
-	-> Inside Health.cs;
-		GetDamage(float bulletDamage)
-		{
-			this.health -= bulletDamage;
-		}
-	-> Die()
-		{
-			if(this.health <= 0)
-				{
-					// trigger an animation
-					// splash coins and experience if enemy
-					// display score and return to menu if player
-				}
-		}
--> Implement "Bullet"
-	-> GetDamage function to decrease staticaly once it is collided with a bullet 
-	-> Send bullet's damage as a parameter do the GetDamage function, then decrease the health point inside. (more flexibility.)
-
+-> Line Renderer For drawing a ray from the main player's gun
 -> Level Manager; to traverse among the levels.
+		> Level Management,
+			:Mechanic: 				Extraction Point will be available at the end, right in front of the door. 
+			:Availability Rule:		If there are no enemy left on the scene, open the passage
+			Level 1: 		Two enemies
+			Level 2:		Four enemies
+			Level 3:		Enemies will spawn in waves. (2 - 4 - 8) [min:2 - max:8]
+
+-> Scoring Mechanism,
+	:Mechanism:		Every enemy will grant 10p
+
 
 [OZAN]
 -> MainMenu
--> InGame UI; PlayerHealth && Score && Experience
+-> InGame && Score && Experience
 -> DisplayScore UI; Upon death or finishing the game
 
 [ERTUG]
@@ -43,6 +36,7 @@ Youtube Tutorials;
 -> "Third Person Shooter E3: Player & Gamemanager event"		by Stevie ROF
 -> "Third Person Shooter E5: Shooter"							by Stevie ROF
 -> "HowTo: Build a 3rd person shooter in Unity - Part 1"		by Jason Weimann
+-> "Unity Tutorial - How to make Enemy Healthbars"				by Dapper Dino
 
 
 
