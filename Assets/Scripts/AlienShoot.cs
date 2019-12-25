@@ -7,7 +7,6 @@ public class AlienShoot : MonoBehaviour
     [SerializeField] Bullet alienBullet;
     [SerializeField] float rateOfFire;
     public bool canFire;
-    float counter = 0f;
 
 
     [HideInInspector] public Transform muzzle;
@@ -20,17 +19,10 @@ public class AlienShoot : MonoBehaviour
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        counter++;
-
-        if (counter == 50f)
-        {
-            counter = 0f;
-            Shooting();
-        }
-
-    }*/
+        //Shooting();
+    }
 
     void Shooting()
     {
@@ -46,16 +38,6 @@ public class AlienShoot : MonoBehaviour
         canFire = true;
 
     }
-    /* void ShootingMech()
-     {
-         for (counter = 0; counter <= 10; counter++)
-         {
-             if (counter == 10)
-             {
-                 Shooting();
-                 counter = 0;
-             }
-         }
-     }*/
+    
 
 }

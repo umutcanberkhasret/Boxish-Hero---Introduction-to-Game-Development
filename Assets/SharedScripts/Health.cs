@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
         else if (health > 0f)
         {
             health -= damage;
-            Debug.Log(health);
+
         }
 
         if (health <= 0f)
@@ -49,6 +49,16 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
+        if (gameObject.tag == "Enemy")
+        {
+            Score.playerScore += 100;
+        }
+        if (gameObject.tag == "Player")
+        {
+            // Display GameOver UI and score.
+            // Navigate back to MainMenu
+        }
+
         Destroy(gameObject);
     }
 

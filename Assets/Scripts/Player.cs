@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private CharacterController characterController;
     private Animator animator;
 
-    float speed = 300;
+    float speed = 500;
     float turnSpeed = 10f;
 
     /*[SerializeField] MouseInput MouseControl;

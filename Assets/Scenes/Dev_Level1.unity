@@ -5,11 +5,12 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
+    smallestOccluder: 20
     smallestHole: 0.25
-    backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+    backfaceThreshold: 16
+  m_SceneGUID: 0735fccdbd300114ea3a108316a46ee2
+  m_OcclusionCullingData: {fileID: 36300000, guid: 7464234d035a84148a492a14725baaca,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -615,16 +616,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
-    - target: {fileID: 8676117845630504419, guid: 54e95dcf9c820444abb1243dd2b38ca3,
-        type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8676117845630504419, guid: 54e95dcf9c820444abb1243dd2b38ca3,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9e0837a6ed72e1148a8b71ff14e27c3d, type: 2}
     - target: {fileID: 8676117845630504429, guid: 54e95dcf9c820444abb1243dd2b38ca3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -783,7 +774,7 @@ PrefabInstance:
     - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
@@ -1209,7 +1200,7 @@ PrefabInstance:
     - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
@@ -1424,16 +1415,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606069, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606072, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 126
-      objectReference: {fileID: 0}
     - target: {fileID: 7042872117199606073, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1489,41 +1470,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606073, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10.114724
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606073, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.63902
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_PreserveUVs
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0418927b9200f0a41a46a8e4db765d67, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23cc7f8132da574428cd9d3392553d92, type: 3}
 --- !u!4 &1344190593 stripped
@@ -1849,12 +1795,12 @@ PrefabInstance:
     - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
       propertyPath: m_PreserveUVs
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
       propertyPath: m_DynamicOccludee
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
         type: 3}
@@ -1871,6 +1817,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0418927b9200f0a41a46a8e4db765d67, type: 2}
+    - target: {fileID: 7042872117199606075, guid: 23cc7f8132da574428cd9d3392553d92,
+        type: 3}
+      propertyPath: m_AutoUVMaxAngle
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23cc7f8132da574428cd9d3392553d92, type: 3}
 --- !u!4 &1913931670 stripped
