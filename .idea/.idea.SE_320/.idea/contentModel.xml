@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Ozan Saçmaz\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ozan Saçmaz\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_SE_320.-1753011148.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ozan Saçmaz\Documents\SE 320 Project\SE_320" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="320 References.txt" t="Include" />
+        <e p="SciFi_Door" t="Include">
+          <e p="readme.txt" t="Include" />
+          <e p="Script" t="Include">
+            <e p="door.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AlienBullet.cs" t="Include" />
+          <e p="AlienShoot.cs" t="Include" />
+          <e p="AssaultRifle.cs" t="Include" />
+          <e p="BasicEnemy.cs" t="Include" />
+          <e p="CameraMovement.cs" t="Include" />
+          <e p="HPBarAlignment.cs" t="Include" />
+          <e p="InputController.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerShoot.cs" t="Include" />
+          <e p="Score.cs" t="Include" />
+        </e>
+        <e p="SharedScripts" t="Include">
+          <e p="Bullet.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Shooter.cs" t="Include" />
+        </e>
+        <e p="Will Be Deleted" t="Include">
+          <e p="ToonSoldiers_demo" t="Include">
+            <e p="ToonSoldiers_demo.txt" t="Include" />
+          </e>
+          <e p="Yurowm" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Actions.cs" t="Include" />
+                <e p="CharacterPanel.cs" t="Include" />
+                <e p="CharacterViewer.cs" t="Include" />
+                <e p="PlayerController.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="SkinShader.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="SE_320.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
