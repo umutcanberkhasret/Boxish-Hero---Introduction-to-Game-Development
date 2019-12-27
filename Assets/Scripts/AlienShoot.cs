@@ -21,7 +21,7 @@ public class AlienShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Shooting();
+        Shooting();
     }
 
     void Shooting()

@@ -22,7 +22,7 @@ public class BasicEnemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   
-      // GoToPoint();
+      GoToPoint();
     }
 
     void GoToPoint()

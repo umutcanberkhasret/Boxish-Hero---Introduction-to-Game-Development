@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // was MonoBehaviour
-public class GameManager
+public class GameManager : MonoBehaviour
 {
     /*  Implementing the infrastructure to make the GameManager unique throughout
         the game's lifeline to avoid any conflicts.
     */
 
-
+    public static float remainingLives = 3f;
     private new GameObject gameObject;
 
     private static GameManager myInstance;
@@ -16,12 +16,14 @@ public class GameManager
     {
         get
         {
-            if (myInstance == null)
+            if (GameObject.Find("_gameManager") == null && myInstance == null)
+            //if (myInstance == null)
             {
                 myInstance = new GameManager
                 {
                     gameObject = new GameObject("_gameManager")
                 };
+                myInstance.gameObject.AddComponent<GameManager>();
                 myInstance.gameObject.AddComponent<InputController>();
             }
             return myInstance;
@@ -42,5 +44,39 @@ public class GameManager
             return myInputController;
 
         }
+    }
+
+    public void LevelComplete()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("gamemanager SA bitti");
+    }
+
+    public void EndGame()
+    {
+        Debug.Log("Game over..");
+        remainingLives--;
+        if (remainingLives > 0)
+        {
+            Restart();
+        }
+        else if (remainingLives == 0)
+        {
+            toMainMenu();
+        }
+        ///toMainMenu();
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void toMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Score.playerScore = 0;
+        remainingLives = 3f;
+
     }
 }

@@ -19,7 +19,7 @@ public class AlienBullet : Bullet
         }
         else
         {
-            Debug.Log("Hit" + other.gameObject.name);
+            //Debug.Log("Hit" + other.gameObject.name);
 
         }
         Destroy(gameObject);

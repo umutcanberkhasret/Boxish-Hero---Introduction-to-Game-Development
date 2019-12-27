@@ -14,7 +14,6 @@ public class Health : MonoBehaviour
     GameObject healthBarUI;
     [SerializeField]
     Slider healthSlider;
-
     private void Start()
     {
         healthBarUI.SetActive(true);
@@ -35,7 +34,7 @@ public class Health : MonoBehaviour
             Die();
 
         }
-        else if (health > 0f)
+        else if (health >= 0f)
         {
             health -= damage;
 
@@ -52,14 +51,16 @@ public class Health : MonoBehaviour
         if (gameObject.tag == "Enemy")
         {
             Score.playerScore += 100;
+            Destroy(gameObject);
         }
         if (gameObject.tag == "Player")
-        {
-            // Display GameOver UI and score.
-            // Navigate back to MainMenu
+        {   
+
+            FindObjectOfType<GameManager>().EndGame();
+           
         }
 
-        Destroy(gameObject);
+        
     }
 
     public float CalculateHealth()

@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         var movement = new Vector3(playerInput.Horizontal, 0, playerInput.Vertical);
 
         characterController.SimpleMove((movement * speed)* Time.deltaTime);
+        
         animator.SetFloat("Speed", movement.magnitude);
 
         if (movement.magnitude > 0)

@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Debug.Log("Hit" + other.gameObject.name);
+            //Debug.Log("Hit" + other.gameObject.name);
 
         }
         Destroy(gameObject);
