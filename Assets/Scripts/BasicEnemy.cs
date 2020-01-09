@@ -28,7 +28,7 @@ public class BasicEnemy : MonoBehaviour
         
         agent.SetDestination(player.transform.position);
 
-        if (Vector3.Distance(player.transform.position, transform.position) < 5f)
+        if (Vector3.Distance(player.transform.position, transform.position) < 4f)
         {
             agent.isStopped = true;
         }

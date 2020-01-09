@@ -13,7 +13,8 @@ public class LevelAccessibility : MonoBehaviour
         See MainMenu script for a detailed explanation.
     */
     private void Start()
-    {   
+    {
+#if UNITY_EDITOR
         if (!PlayerPrefs.HasKey("2"))
         {
             accessibilityCondition2.enabled = false;
@@ -41,5 +42,7 @@ public class LevelAccessibility : MonoBehaviour
             }
             
         }
+#endif
+
     }
 }

@@ -31,14 +31,17 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("FirstRun", 0);
         }
     }
+
     public void buyLevelAccess(int level)
     {
+#if UNITY_EDITOR
+
         string levelNumber = level.ToString();
 
         // Purchasing Level Access
         if (PlayerPrefs.HasKey(levelNumber))
         {
-           if(PlayerPrefs.GetFloat("Score") >= PlayerPrefs.GetInt(levelNumber))
+            if (PlayerPrefs.GetFloat("Score") >= PlayerPrefs.GetInt(levelNumber))
             {
                 float newCumulativeScore = PlayerPrefs.GetFloat("Score") - PlayerPrefs.GetInt(levelNumber);
                 PlayerPrefs.SetFloat("Score", newCumulativeScore);
@@ -50,26 +53,29 @@ public class MainMenu : MonoBehaviour
                 EditorUtility.DisplayDialog("OOPS", "Looks like you do not have enough points to gain access. You shall hunt more", "OK");
             }
         }
-        
+
         else
         {
             // Reason why we are adding +2 here is because of the index number.
             // Check Build Settings for initial scene order
             LoadLevel(level);
         }
+
+#endif
     }
 
     public void LoadLevel(int level)
     {
-        SceneManager.LoadScene(level+2);
+        SceneManager.LoadScene(level + 2);
     }
 
     public void startOver()
     {
+#if UNITY_EDITOR
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("MainMenu");
         EditorUtility.DisplayDialog("SUCCESS", "All the data related with collected points and purchased levels are deleted.", "OK");
-
+#endif
     }
 
     public void howToPlay()
@@ -86,7 +92,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void QuitGame()
-    {  
+    {
         Application.Quit();
     }
 

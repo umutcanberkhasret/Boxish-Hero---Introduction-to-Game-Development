@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
 
     private static GameManager myInstance;
     public static GameManager GetInstance
-    {
+    {   // "Multiplayer Third Person Shooter E2: GameManager & Input Controller"	by Stevie ROF
+        // The tutorial is used as a guide to create gameManager and hierarchy. 
+        // His work is not taken and placed as a whole. Adjustments for this project were made
         get
         {
             if (GameObject.Find("_gameManager") == null && myInstance == null)

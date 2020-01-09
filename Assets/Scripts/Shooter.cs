@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+    "Multiplayer Third Person Shooter E5: Shooter"							by Stevie ROF
+    The tutorial is used to create main shooting mechanism. It is taken a guide to create  
+    throwGrenade and automated alienShoot mechanisms.
+     
+*/
+
 // Shooter class is created for the later purposes; which is depending on the time
 // we have, we can have different types of guns.
 public class Shooter : MonoBehaviour
