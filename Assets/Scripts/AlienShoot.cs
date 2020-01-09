@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AlienShoot : MonoBehaviour
 {
-    [SerializeField] Bullet alienBullet;
-    [SerializeField] float rateOfFire;
+    public Bullet alienBullet;
+    public float rateOfFire;
     public bool canFire;
 
 

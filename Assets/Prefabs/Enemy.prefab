@@ -486,7 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienBullet: {fileID: 7681736195335961967, guid: 9eb43340126a45b4da022cfd9d87daad,
     type: 3}
-  rateOfFire: 1
+  rateOfFire: 0.75
   canFire: 0
   muzzle: {fileID: 7685509899164431488}
 --- !u!1 &7685509900190856457

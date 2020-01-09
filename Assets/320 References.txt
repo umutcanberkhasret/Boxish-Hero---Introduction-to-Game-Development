@@ -1,18 +1,3 @@
-REMAINING TASKS
----------------
-[UMUT]
--> Level Manager; to traverse among the levels.
-		> Level Management,
-			:Mechanic: 				Extraction Point will be available at the end, right in front of the door. 
-			:Availability Rule:		If there are no enemy left on the scene, open the passage
-			Level 1: 		Two enemies
-			Level 2:		Four enemies
-			Level 3:		Enemies will spawn in waves. (2 - 4 - 8) [min:2 - max:8]
-
-
-
-
-
 References to SE320 Project:
 -> Unity Documents
 
@@ -23,7 +8,6 @@ Youtube Tutorials;
 -> "HowTo: Build a 3rd person shooter in Unity - Part 1"					by Jason Weimann
 -> "Unity Tutorial - How to make Enemy Healthbars"							by Dapper Dino
 -> "Simple laser in unity"													by Ba Duy
-
 
 
 

@@ -17,11 +17,7 @@ public class AlienBullet : Bullet
             other.gameObject.GetComponent<Health>().takeDamage(Damage);
 
         }
-        else
-        {
-            //Debug.Log("Hit" + other.gameObject.name);
 
-        }
         Destroy(gameObject);
 
     }

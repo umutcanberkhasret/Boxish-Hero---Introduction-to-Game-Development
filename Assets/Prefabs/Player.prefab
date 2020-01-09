@@ -505,6 +505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5700989504956986395}
+  - {fileID: 6914153932544830800}
   m_Father: {fileID: 5700989503261383440}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -3.242, z: 0}
@@ -522,8 +523,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rateOfFire: 0.2
   bullet: {fileID: 2636407886045167286, guid: e70f9aee46a1f1d44a6fc11189408f1d, type: 3}
+  grenade: {fileID: 3535690750013883606, guid: 86dc24419231b4045b2a677363b06d72, type: 3}
   muzzle: {fileID: 0}
+  bombThrower: {fileID: 0}
   canFire: 0
+  canThrow: 0
 --- !u!1 &5700989504541619202
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +540,6 @@ GameObject:
   - component: {fileID: 5700989504541619206}
   - component: {fileID: 5700989504541619200}
   - component: {fileID: 5700989504541619203}
-  - component: {fileID: 2036640534}
   - component: {fileID: 2036640533}
   m_Layer: 0
   m_Name: Player
@@ -600,25 +603,11 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2.1
   m_Radius: 1.45
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 1
+  m_StepOffset: 0.2
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: -0.11, y: 1.1, z: 0.26}
---- !u!136 &2036640534
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5700989504541619202}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.27
-  m_Height: 5.79
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.11, y: 1.49, z: 0.26}
 --- !u!114 &2036640533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,8 +620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cfb291b624a424ca6edbbc6db35c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 400
+  maxHealth: 400
   healthBarUI: {fileID: 624141550}
   healthSlider: {fileID: 588163216}
 --- !u!1 &5700989504956986394
@@ -661,7 +650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5700989504956986394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.389, y: 0.547, z: 1.976}
+  m_LocalPosition: {x: 0.39, y: 0.547, z: 2.008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5700989503441534822}
@@ -684,7 +673,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 374f7fc393e611f42b1b1c62a25ad445, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -761,7 +750,7 @@ LineRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
-  m_Loop: 0
+  m_Loop: 1
 --- !u!114 &1499519074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,6 +764,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserRange: 20
+--- !u!1 &7369484400430197736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6914153932544830800}
+  m_Layer: 0
+  m_Name: BombThrower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6914153932544830800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369484400430197736}
+  m_LocalRotation: {x: -0.44468847, y: -0.004647792, z: 0.08780678, w: 0.89135885}
+  m_LocalPosition: {x: 0.67, y: 1.185, z: 2.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5700989503441534822}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -52.367004, y: -8.133, z: 15.2560005}
 --- !u!1001 &5700989503863403050
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class InputController : MonoBehaviour
     public float Horizontal;
     public Vector2 MouseInput;
     public bool Fire1;
+    public bool Fire2;
 
     private void Update()
     {
@@ -21,7 +22,7 @@ public class InputController : MonoBehaviour
         Vertical = Input.GetAxis("Vertical");
         MouseInput = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         Fire1 = Input.GetButton("Fire1");
-
+        Fire2 = Input.GetButton("Fire2");
     }
 
 }

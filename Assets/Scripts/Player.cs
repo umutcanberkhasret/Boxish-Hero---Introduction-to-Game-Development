@@ -36,8 +36,8 @@ public class Player : MonoBehaviour
         #region movement
         var movement = new Vector3(playerInput.Horizontal, 0, playerInput.Vertical);
 
-        characterController.SimpleMove((movement * speed)* Time.deltaTime);
-        
+        characterController.SimpleMove((movement * speed) * Time.deltaTime);
+
         animator.SetFloat("Speed", movement.magnitude);
 
         if (movement.magnitude > 0)
@@ -46,6 +46,23 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, newDirection, Time.deltaTime * turnSpeed);
         }
         #endregion movement
+
+
+        #region SimpleMoveFix
+        // avoiding method SimpleMove to climb over objects.
+        if (this.transform.position.y >= 1f)
+        {
+            Vector3 temp = new Vector3(transform.position.x - 1f, 0, transform.position.z -1f);
+            transform.position = temp;
+            
+        }
+        
+        // If the player falls from the world by any chance, game will deduce a live and restart the current 
+        if(transform.position.y < -1f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
+        #endregion
 
 
 

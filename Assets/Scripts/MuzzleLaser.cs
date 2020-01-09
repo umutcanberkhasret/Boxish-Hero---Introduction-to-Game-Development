@@ -5,7 +5,7 @@ using UnityEngine;
 public class MuzzleLaser : MonoBehaviour
 {
     [SerializeField]
-    float laserRange;
+    float laserRange = 1f;
     LineRenderer gunLaser;
     // Start is called before the first frame update
     void Start()

@@ -8,13 +8,10 @@ public class BasicEnemy : MonoBehaviour
 
     GameObject player;
     NavMeshAgent agent;
-    //private Animator animator;
-
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-      //  animator = GetComponentInChildren < Animator >();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -29,18 +26,18 @@ public class BasicEnemy : MonoBehaviour
     {   
         // Another way of moving towards to the player, used at LAB5
         
-        /*agent.SetDestination(playerLocation.position);
+        agent.SetDestination(player.transform.position);
 
-        if (Vector3.Distance(playerLocation.position, transform.position) < 25f)
+        if (Vector3.Distance(player.transform.position, transform.position) < 5f)
         {
             agent.isStopped = true;
         }
         else
         {
             agent.isStopped = false;
-        }*/
+        }
 
-        agent.destination = player.transform.position;
+        
     }
 
 
