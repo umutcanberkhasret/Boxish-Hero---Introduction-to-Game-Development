@@ -53,15 +53,15 @@ public class MainMenu : MonoBehaviour
         
         else
         {
-            // Reason why we are adding +1 here is because of the index number.
+            // Reason why we are adding +2 here is because of the index number.
             // Check Build Settings for initial scene order
-            LoadLevel(level+1);
+            LoadLevel(level);
         }
     }
 
     public void LoadLevel(int level)
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(level+2);
     }
 
     public void startOver()
@@ -70,6 +70,15 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         EditorUtility.DisplayDialog("SUCCESS", "All the data related with collected points and purchased levels are deleted.", "OK");
 
+    }
+
+    public void howToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     public void PlayGame()
     {

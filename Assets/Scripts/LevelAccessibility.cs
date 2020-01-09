@@ -33,8 +33,13 @@ public class LevelAccessibility : MonoBehaviour
         }
             
         if(!PlayerPrefs.HasKey("2") && !PlayerPrefs.HasKey("3"))
-        {
-            EditorUtility.DisplayDialog("CONGRATS", "You have unlocked all of the levels", "OK");
+        {   
+            if(PlayerPrefs.GetInt("MessageShown",0) == 0)
+            {
+                EditorUtility.DisplayDialog("CONGRATS", "You have unlocked all of the levels", "OK");
+                PlayerPrefs.SetInt("MessageShown", 1);
+            }
+            
         }
     }
 }
