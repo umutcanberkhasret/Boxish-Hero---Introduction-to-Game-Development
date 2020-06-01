@@ -5,12 +5,13 @@ The Purpose
 	-> Umutcan Berk HASRET
 	-> Ertuğ ADALARLI
 	-> Ozan SAÇMAZ
-
-This submission includes the folders below;
+	
 
 Dev Environment
 ***************
 -> Unity Version 2018.4.14f1 was used to develop this game.
+
+
 
 
 YouTube Tutorial Video on GamePlay:
